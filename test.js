@@ -1,6 +1,7 @@
 var imagenames = ["cane", "casa", "dado", "dito", "luna", "mago", "mano", "mela", "muro", "nove", "pera", "pila", "rana", "rete", "rosa", "sale", "sole", "tana", "topo", "toro"];
 var lastrng = 0;
 var imagerng;
+var correct;
 
 
 function newimage(){
@@ -22,25 +23,25 @@ function newimage(){
 }
 
 function check(){
-    document.getElementById('text').value = document.getElementById('text').value.toUpperCase();
     if(document.getElementById('text').value.length == 4){
+        document.getElementById('text').setAttribute("readonly", true);
         if(document.getElementById('text').value.toLowerCase() == imagenames[imagerng]){
-            hidecontrols(true);
-            newimage();
-            document.getElementById('text').value = null;
+            correct = true;
         }
         else{
-            hidecontrols(false);
-            document.getElementById('text').value = null;
+            correct = false;
         }
+        setTimeout(hidecontrols, 3000);
     }
 }
 
-function hidecontrols(correct){
+var hidecontrols = function(){
 
     if(correct){
         document.getElementById('emo').setAttribute("src", './res/smiley/smile' + imagerng + '.JPG');
-        console.log("si")
+        console.log("si");
+        newimage();
+
     }
     else{
         document.getElementById('emo').setAttribute("src", './res/ops.JPG');
@@ -51,6 +52,7 @@ function hidecontrols(correct){
     document.getElementById('image').style.visibility = "hidden";
     document.getElementById('text').style.visibility = "hidden";
     document.getElementById('emo').style.visibility = "visible";
+    document.getElementById('text').value = null;
 
     setTimeout(showcontrols, 3000);
 }
@@ -60,4 +62,6 @@ var showcontrols = function(){
     document.getElementById('text').style.visibility = "visible";
     document.getElementById('emo').style.visibility = "hidden";
     document.getElementById('text').focus();
+    document.getElementById('text').removeAttribute("readonly")
+
 }

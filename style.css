@@ -39,13 +39,11 @@ body{
     font-size: 70px;
     font-family: monospace;
     border: none;
-}
-
-#text{
     background-size: 1.2em;
     padding-left: 26px;
     letter-spacing: 40px;
     padding-right: 0px;
+    text-transform: uppercase;
 }
 
 #emo{
