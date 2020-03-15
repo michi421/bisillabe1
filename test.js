@@ -37,7 +37,7 @@ function check(){
 function hidecontrols(correct){
 
     if(correct){
-        document.getElementById('emo').setAttribute("src", './res/smiley/smile' + imagerng + '.jpg');
+        document.getElementById('emo').setAttribute("src", './res/smiley/smile' + imagerng + '.JPG');
         console.log("si")
     }
     else{
