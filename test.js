@@ -11,7 +11,7 @@ function newimage(){
             if(imagerng != 0){
                 if(imagerng != lastrng){
                     lastrng = imagerng;
-                    document.getElementById('image').setAttribute("src", '/res/images/' + imagenames[imagerng] + '.png');
+                    document.getElementById('image').setAttribute("src", './res/images/' + imagenames[imagerng] + '.png');
                     break;
                 }
             }
@@ -37,11 +37,11 @@ function check(){
 function hidecontrols(correct){
 
     if(correct){
-        document.getElementById('emo').setAttribute("src", '/res/smiley/smile' + imagerng + '.jpg');
+        document.getElementById('emo').setAttribute("src", './res/smiley/smile' + imagerng + '.jpg');
         console.log("si")
     }
     else{
-        document.getElementById('emo').setAttribute("src", '/res/ops.JPG');
+        document.getElementById('emo').setAttribute("src", './res/ops.JPG');
         console.log("no")
     }
 
