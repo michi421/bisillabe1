@@ -10,12 +10,11 @@ function newimage(){
         if(imagerng <= 20){
             if(imagerng != 0){
                 if(imagerng != lastrng){
-                    lastrng = imagerng;
-                    document.getElementById('image').setAttribute("src", './res/images/' + imagenames[imagerng] + '.png');
-                    if(document.getElementById('image').getAttribute(src) == "./res/images/undefined.png"){
-                        newimage();
+                    if(imagerng != undefined){
+                        lastrng = imagerng;
+                        document.getElementById('image').setAttribute("src", './res/images/' + imagenames[imagerng] + '.png');
+                        break;
                     }
-                    break;
                 }
             }
         }
