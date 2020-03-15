@@ -57,4 +57,5 @@ var showcontrols = function(){
     document.getElementById('image').style.visibility = "visible";
     document.getElementById('text').style.visibility = "visible";
     document.getElementById('emo').style.visibility = "hidden";
+    document.getElementById('text').focus();
 }
