@@ -59,3 +59,10 @@ body{
     z-index: 100;
     visibility: hidden;
 }
+
+#c{
+    position: absolute;
+    float: right;
+    right: 0.5em;
+    bottom: 0.1em;
+}
