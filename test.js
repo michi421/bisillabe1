@@ -12,6 +12,9 @@ function newimage(){
                 if(imagerng != lastrng){
                     lastrng = imagerng;
                     document.getElementById('image').setAttribute("src", './res/images/' + imagenames[imagerng] + '.png');
+                    if(document.getElementById('image').getAttribute(src) == "./res/images/undefined.png"){
+                        newimage();
+                    }
                     break;
                 }
             }
